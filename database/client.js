@@ -1,6 +1,8 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://mongo2:kemmy@cluster0.ywlcavc.mongodb.net/?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+const dotenv = require('dotenv');
+dotenv.config();
+
+const client = new MongoClient(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 const collection= client.db("Potion_database").collection('users');
 
 const dbobject= {};

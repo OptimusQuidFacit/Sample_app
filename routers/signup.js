@@ -1,8 +1,8 @@
 const express= require('express')
 const router= express.Router();
 const cryptojs = require('crypto-js');
-const dotenv = require('dotenv');
-dotenv.config();
+// const dotenv = require('dotenv');
+// dotenv.config();
 
 const dbobject = require('../database/client.js');
 
